@@ -1,0 +1,25 @@
+OrderID,OrderDate,Region,Category,Units,UnitPrice,Revenue,Profit
+1001,2025-01-04,North,Electronics,3,249.99,749.97,142.49
+1002,2025-01-09,South,Furniture,2,189.50,379.00,68.22
+1003,2025-01-16,East,Office Supplies,8,18.75,150.00,39.00
+1004,2025-01-23,West,Accessories,5,42.00,210.00,58.80
+1005,2025-02-02,East,Electronics,1,329.00,329.00,72.38
+1006,2025-02-11,North,Furniture,4,215.25,861.00,163.59
+1007,2025-02-18,West,Office Supplies,12,14.50,174.00,45.24
+1008,2025-02-25,South,Accessories,3,58.00,174.00,41.76
+1009,2025-03-03,South,Electronics,2,279.00,558.00,122.76
+1010,2025-03-10,West,Furniture,1,349.00,349.00,69.80
+1011,2025-03-17,North,Office Supplies,15,12.25,183.75,51.45
+1012,2025-03-26,East,Accessories,4,39.99,159.96,43.19
+1013,2025-04-05,West,Electronics,2,419.00,838.00,175.98
+1014,2025-04-12,East,Furniture,3,159.99,479.97,91.19
+1015,2025-04-19,South,Office Supplies,7,22.00,154.00,38.50
+1016,2025-04-28,North,Accessories,6,34.50,207.00,55.89
+1017,2025-05-06,North,Electronics,1,599.00,599.00,137.77
+1018,2025-05-13,East,Furniture,2,249.00,498.00,89.64
+1019,2025-05-20,West,Office Supplies,10,16.80,168.00,45.36
+1020,2025-05-29,South,Accessories,8,29.95,239.60,62.30
+1021,2025-06-03,East,Electronics,3,189.00,567.00,124.74
+1022,2025-06-10,South,Furniture,2,299.99,599.98,113.996
+1023,2025-06-17,North,Office Supplies,9,24.50,220.50,59.535
+1024,2025-06-24,West,Accessories,4,64.00,256.00,71.68

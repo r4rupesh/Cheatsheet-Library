@@ -1,0 +1,21 @@
+Command,Description
+df = pd.read_csv('file.csv'),Load data from CSV file
+df.head(),Display first 5 rows
+df.shape,Get dimensions of df
+df.info(),Show datatypes and info
+df.describe(),Get summary statistics
+df['column'],Select single column
+"df[['col1', 'col2']]",Select multiple columns
+df.loc[row_label],Select rows by label
+df.iloc[row_index],Select rows by position
+df.dropna(),Remove missing values
+df.fillna(value),Fill missing values
+df.sort_values('column'),Sort by column values
+df.groupby('column').agg(),Group and aggregate data
+"df.merge(df2, on='key')",Combine two dataframes
+df.value_counts(),Count unique values
+df['column'].mean(),Calculate column average
+df.query('column > value'),Filter using condition
+df.rename(columns={'old': 'new'}),Rename columns
+"df.drop('column', axis=1)",Remove columns
+df.reset_index(),Reset row indices
