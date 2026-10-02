@@ -58,7 +58,7 @@ python -m pip install -r requirements.txt
 streamlit run script.py
 ```
 
-After the server starts, open [http://localhost:8506](http://localhost:8506) or the URL printed by Streamlit.
+After the server starts, open (https://cheatsheet-library.streamlit.app/) or the URL printed by Streamlit.
 
 </details>
 
