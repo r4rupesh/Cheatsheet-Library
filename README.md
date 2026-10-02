@@ -1,7 +1,7 @@
 # 🕮 CheatSheets Library
 
 CheatSheets Library is a Streamlit learning app with concise references and hands-on practice areas for popular data tools.
-## 🌐 Live Application
+## 🌐︎ Live Application
 Access the deployed app directly in your browser:  
 👉 **[No-Code Data Analyzer Live App](https://cheatsheet-library.streamlit.app/)**
 
