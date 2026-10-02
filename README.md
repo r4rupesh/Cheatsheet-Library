@@ -55,7 +55,6 @@ Code playgrounds execute on the app server. Run only code you trust.
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 python -m pip install -r requirements.txt
-python -m playwright install chromium
 streamlit run script.py
 ```
 
@@ -63,4 +62,4 @@ After the server starts, open [http://localhost:8506](http://localhost:8506) or 
 
 </details>
 
-Chromium is used to export the Python notebook as PDF and PNG. See [requirements.txt](requirements.txt) for the app dependencies.
+See [requirements.txt](requirements.txt) for the app dependencies.

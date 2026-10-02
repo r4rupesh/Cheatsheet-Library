@@ -1,10 +1,7 @@
 import base64
 import json
 
-import nbformat
 import streamlit as st
-from nbconvert import HTMLExporter
-from playwright.sync_api import sync_playwright
 from code_editor import code_editor
 from pynteract import Shell
 
@@ -51,30 +48,6 @@ def playground():
 
 
 
-@st.cache_data(show_spinner=False)
-def create_notebook_exports(notebook_bytes):
-    notebook = nbformat.reads(notebook_bytes.decode("utf-8"), as_version=4)
-    html, _ = HTMLExporter(template_name="lab").from_notebook_node(notebook)
-
-    with sync_playwright() as playwright:
-        browser = playwright.chromium.launch(
-            headless=True,
-            executable_path=playwright.chromium.executable_path,
-        )
-        try:
-            page = browser.new_page(
-                viewport={"width": 1440, "height": 1000},
-                device_scale_factor=1,
-            )
-            page.set_content(html, wait_until="networkidle")
-            pdf_bytes = page.pdf(format="A4", print_background=True)
-            image_bytes = page.screenshot(full_page=True)
-        finally:
-            browser.close()
-
-    return pdf_bytes, image_bytes
-
-
 def python_cheatsheet():
     st.set_page_config(page_title="CheatSheets | Python", page_icon=":material/auto_stories:", layout="wide")
     notebook_file = DATA_DIR / "python_cheatsheet.ipynb"
@@ -88,9 +61,8 @@ def python_cheatsheet():
         st.caption(notebook_file.name)
         notebook_bytes = notebook_file.read_bytes()
         notebook_json = json.loads(notebook_bytes)
-        pdf_bytes, image_bytes = create_notebook_exports(notebook_bytes)
 
-        download_columns = st.columns(4)
+        download_columns = st.columns(2)
         with download_columns[0]:
             st.download_button(
                 "Download Markdown",
@@ -107,23 +79,6 @@ def python_cheatsheet():
                 mime="application/x-ipynb+json",
                 icon=":material/download:",
             )
-        with download_columns[2]:
-            st.download_button(
-                "Download PDF",
-                data=pdf_bytes,
-                file_name=f"{notebook_file.stem}.pdf",
-                mime="application/pdf",
-                icon=":material/download:",
-            )
-        with download_columns[3]:
-            st.download_button(
-                "Download PNG",
-                data=image_bytes,
-                file_name=f"{notebook_file.stem}.png",
-                mime="image/png",
-                icon=":material/download:",
-            )
-
         st.markdown(reference_file.read_text(encoding="utf-8"))
 
         for cell in notebook_json.get("cells", []):

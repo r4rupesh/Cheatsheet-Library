@@ -11,8 +11,3 @@ scipy==1.18.1
 openpyxl==3.1.5
 formulas==1.3.4
 dataframe-image==0.2.7
-nbformat==5.11.1
-nbconvert==7.17.1
-playwright==1.63.0
-# Install Chromium after dependencies for notebook PDF/PNG exports:
-# python -m playwright install chromium
