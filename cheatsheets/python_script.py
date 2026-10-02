@@ -61,19 +61,9 @@ def python_cheatsheet():
         st.caption(notebook_file.name)
         notebook_bytes = notebook_file.read_bytes()
         notebook_json = json.loads(notebook_bytes)
-
-        download_columns = st.columns(2)
-        with download_columns[0]:
-            st.download_button(
-                "Download Markdown",
-                data=reference_file.read_bytes(),
-                file_name=reference_file.name,
-                mime="text/markdown",
-                icon=":material/download:",
-            )
-        with download_columns[1]:
-            st.download_button(
-                "Download .ipynb",
+            
+        st.download_button(
+                "Download CheatSheet Notebook",
                 data=notebook_bytes,
                 file_name=notebook_file.name,
                 mime="application/x-ipynb+json",
