@@ -1,6 +1,9 @@
-# CheatSheets Library
+#![Auto Stories](https://shields.io) CheatSheets Library
 
 CheatSheets Library is a Streamlit learning app with concise references and hands-on practice areas for popular data tools.
+## 🌐 Live Application
+Access the deployed app directly in your browser:  
+👉 **[No-Code Data Analyzer Live App](https://cheatsheet-library.streamlit.app/)**
 
 **Jump to:** [Tools](#tools) · [Features](#features) · [Project layout](#project-layout) · [Run locally](#run-locally)
 
@@ -57,9 +60,6 @@ python -m venv .venv
 python -m pip install -r requirements.txt
 streamlit run script.py
 ```
-
-After the server starts, open (https://cheatsheet-library.streamlit.app/) or the URL printed by Streamlit.
-
 </details>
 
 See [requirements.txt](requirements.txt) for the app dependencies.
