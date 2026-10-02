@@ -1,4 +1,4 @@
-#![Auto Stories](https://shields.io) CheatSheets Library
+# 🕮 CheatSheets Library
 
 CheatSheets Library is a Streamlit learning app with concise references and hands-on practice areas for popular data tools.
 ## 🌐 Live Application
